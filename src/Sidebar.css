@@ -1,7 +1,9 @@
 .sidebar {
   width: 200px;
+  position: sticky;
+  top: 0;
   height: 100vh;
-  background-color: #10254a;
+  background-color: #1a1a1b;
   padding: 30px;
 }
 

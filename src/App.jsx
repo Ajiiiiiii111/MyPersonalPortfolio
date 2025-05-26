@@ -1,20 +1,24 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Sidebar from "./Sidebar";
+import Navbar from "./navbar";
 import About from "./about";
 import Skills from "./skill";
+import Project from "./project";
+import Contact from "./contact";
+
 // import other pages like Skills, Projects, etc.
 
 const App = () => {
   return (
     <Router>
-      <div style={{ display: 'flex' }}>
-        <Sidebar />
-        <div style={{ flex: 1, padding: '20px' }}>
+      <div>
+        <Navbar />
+        <div style={{ padding: '20px' }}>
           <Routes>
             <Route path="/about" element={<About />} />
-            {/* Add your other routes here */}
-            {<Route path="/skills" element={<Skills />} />}
-            {/* <Route path="/projects" element={<Projects />} /> */}
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/project" element={<Project />} />
+                <Route path="/contact" element={<Contact />} />
+            {/* Add more routes here */}
           </Routes>
         </div>
       </div>
