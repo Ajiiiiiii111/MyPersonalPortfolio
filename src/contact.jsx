@@ -1,11 +1,34 @@
-import React from 'react';
-import './contact.css'; // Assuming you have a CSS file for styling
-
+import React, { useState } from 'react';
+import './contact.css';
 
 const Contact = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          setIsSubmitted(true);
+          form.reset();
+        } else {
+          alert("Something went wrong. Try again later.");
+        }
+      });
+  };
+
   return (
     <div>
-      <form id="contactform" action="https://api.web3forms.com/submit" method="POST">
+      {isSubmitted && <p className="success-message">Message sent successfully!</p>}
+      <form id="contactform" onSubmit={handleSubmit}>
         <div className="inputbox">
           <input type="hidden" name="access_key" value="c24aa188-5d98-4072-89c0-b03026540c9f" />
           <input type="text" name="name" placeholder="Name" required />

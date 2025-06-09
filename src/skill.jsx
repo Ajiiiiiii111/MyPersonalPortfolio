@@ -18,12 +18,12 @@ const Skill = () => {
            
         <div className="skill-item">
           <h2>HTML</h2>
-          <img src="src/assets/html.jpg" alt="HTML" />
+          <img src="src/assets/html4.png" alt="HTML" />
         </div>
 
         <div className="skill-item">
           <h2>CSS</h2>
-          <img src="src/assets/css.jpg" alt="CSS" />
+          <img src="src/assets/CSS2.jpg" alt="CSS" />
         </div>
 
         <div className="skill-item">
@@ -33,7 +33,7 @@ const Skill = () => {
 
         <div className="skill-item">
           <h2>JavaScript</h2>
-          <img src="src/assets/js.jpg" alt="JavaScript" />
+          <img src="src/assets/JS2.jpg" alt="JavaScript" />
         </div>
 
         <div className="skill-item">

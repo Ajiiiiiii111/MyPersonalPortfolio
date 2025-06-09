@@ -1,0 +1,26 @@
+.future-plans {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.future-plans h2 {
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.future-plans ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.plan-item {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #444;
+}
